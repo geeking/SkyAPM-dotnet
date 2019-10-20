@@ -94,13 +94,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "benchmark", "benchmark", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkyApm.Core.Tests", "test\SkyApm.Core.Tests\SkyApm.Core.Tests.csproj", "{5E654407-E22F-4696-A33F-C4B372F547BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyApm.Diagnostics.Grpc", "src\SkyApm.Diagnostics.Grpc\SkyApm.Diagnostics.Grpc.csproj", "{8C389735-61CE-405C-972F-3790DF1E823E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkyApm.Diagnostics.Grpc", "src\SkyApm.Diagnostics.Grpc\SkyApm.Diagnostics.Grpc.csproj", "{8C389735-61CE-405C-972F-3790DF1E823E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "grpc", "grpc", "{53E9CEBA-2D11-41FD-AA60-0151A5442CC4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkyApm.Sample.GrpcProto", "sample\grpc\SkyApm.Sample.GrpcProto\SkyApm.Sample.GrpcProto.csproj", "{5576D9C5-8856-44AD-86AD-FE73A22751EF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkyApm.Sample.GrpcServer", "sample\grpc\SkyApm.Sample.GrpcServer\SkyApm.Sample.GrpcServer.csproj", "{0EB6D474-A915-4075-B142-FE07321F3AA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyApm.Diagnostics.MySql", "src\SkyApm.Diagnostics.MySql\SkyApm.Diagnostics.MySql.csproj", "{B21C0BAB-751F-4748-804D-E862CD703707}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -224,6 +226,10 @@ Global
 		{0EB6D474-A915-4075-B142-FE07321F3AA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EB6D474-A915-4075-B142-FE07321F3AA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0EB6D474-A915-4075-B142-FE07321F3AA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B21C0BAB-751F-4748-804D-E862CD703707}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B21C0BAB-751F-4748-804D-E862CD703707}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B21C0BAB-751F-4748-804D-E862CD703707}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B21C0BAB-751F-4748-804D-E862CD703707}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -267,6 +273,7 @@ Global
 		{53E9CEBA-2D11-41FD-AA60-0151A5442CC4} = {844CEACD-4C85-4B15-9E2B-892B01FDA4BB}
 		{5576D9C5-8856-44AD-86AD-FE73A22751EF} = {53E9CEBA-2D11-41FD-AA60-0151A5442CC4}
 		{0EB6D474-A915-4075-B142-FE07321F3AA9} = {53E9CEBA-2D11-41FD-AA60-0151A5442CC4}
+		{B21C0BAB-751F-4748-804D-E862CD703707} = {B5E677CF-2920-4B0A-A056-E73F6B2CF2BC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {94C0DA2C-CCCB-4314-93A2-9809B5DD0583}

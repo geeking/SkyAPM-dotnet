@@ -23,6 +23,7 @@ using SkyApm.Diagnostics;
 using SkyApm.Diagnostics.EntityFrameworkCore;
 using SkyApm.Diagnostics.Grpc;
 using SkyApm.Diagnostics.HttpClient;
+using SkyApm.Diagnostics.MySql;
 using SkyApm.Diagnostics.SqlClient;
 using SkyApm.Logging;
 using SkyApm.Sampling;
@@ -61,7 +62,11 @@ namespace SkyApm.Agent.GeneralHost
             services.AddSingleton<IHostedService, InstrumentationHostedService>();
             services.AddSingleton<IEnvironmentProvider, HostingEnvironmentProvider>();
             services.AddTracing().AddSampling().AddGrpcTransport().AddLogging();
-            services.AddSkyApmExtensions().AddHttpClient().AddSqlClient().AddGrpc()
+            services.AddSkyApmExtensions()
+                .AddHttpClient()
+                .AddMySql()
+                .AddSqlClient()
+                .AddGrpc()
                 .AddEntityFrameworkCore(c => c.AddPomeloMysql().AddNpgsql().AddSqlite());
             return services;
         }

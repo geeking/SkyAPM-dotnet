@@ -38,6 +38,7 @@ using SkyApm.Diagnostics.SqlClient;
 using SkyApm.Utilities.DependencyInjection;
 using SkyApm.Diagnostics.SmartSql;
 using SkyApm.Diagnostics.Grpc;
+using SkyApm.Diagnostics.MySql;
 
 namespace SkyApm.Agent.AspNetCore
 {
@@ -64,7 +65,12 @@ namespace SkyApm.Agent.AspNetCore
             services.AddSingleton<IEnvironmentProvider, HostingEnvironmentProvider>();
             services.AddSingleton<IExecutionService, CLRStatsService>();
             services.AddTracing().AddSampling().AddGrpcTransport().AddLogging();
-            services.AddSkyApmExtensions().AddAspNetCoreHosting().AddHttpClient().AddSqlClient().AddGrpc()
+            services.AddSkyApmExtensions()
+                .AddAspNetCoreHosting()
+                .AddHttpClient()
+                .AddMySql()
+                .AddSqlClient()
+                .AddGrpc()
                 .AddEntityFrameworkCore(c => c.AddPomeloMysql().AddNpgsql().AddSqlite());
             return services;
         }

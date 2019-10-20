@@ -18,6 +18,10 @@
 
 namespace SkyApm.Common
 {
+    /// <summary>
+    /// for all skywalking support components,
+    /// see <seealso href="https://github.com/apache/skywalking/blob/master/oap-server/server-starter/src/main/resources/component-libraries.yml"/>
+    /// </summary>
     public static class Components
     {
         public static readonly StringOrIntValue ASPNETCORE= new StringOrIntValue("AspNetCore");
@@ -41,5 +45,7 @@ namespace SkyApm.Common
         public static readonly StringOrIntValue SMART_SQL = new StringOrIntValue("SmartSql");
 
         public static readonly StringOrIntValue GRPC = new StringOrIntValue("GRPC");
+
+        public static readonly StringOrIntValue MYSQL = new StringOrIntValue("Mysql");
     }
 }
